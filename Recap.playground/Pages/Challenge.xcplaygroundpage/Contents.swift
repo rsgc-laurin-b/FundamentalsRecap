@@ -27,8 +27,23 @@ import PlaygroundSupport
 // Create canvas
 let canvas = Canvas(width: 400, height: 400)
 
-// Replace this comment and add your code below
+canvas.drawShapesWithFill = false
+canvas.drawShapesWithBorders = true
 
+
+// Top circles
+
+for x in stride(from: 50, through: 350, by: 100){
+//small circle
+    canvas.borderColor = Color(hue: 53, saturation: 93, brightness: 98, alpha: 100)
+    canvas.drawEllipse(centreX: x, centreY: 350, width: 25, height: 25, borderWidth: 10)
+//medium circle
+    canvas.borderColor = Color(hue: 22 , saturation: 93, brightness: 90, alpha: 100)
+    canvas.drawEllipse(centreX: x, centreY: 350, width: 40, height: 40, borderWidth: 10)
+//big circle
+    canvas.borderColor = Color(hue: 26 , saturation: 69, brightness: 37, alpha: 100)
+    canvas.drawEllipse(centreX: x, centreY: 350, width: 60, height: 60, borderWidth: 10)
+}
 /*:
  ## Template code
  The code below is necessary to see results in the Assistant Editor at right. Please do not remove.
